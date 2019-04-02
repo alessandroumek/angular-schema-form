@@ -72,7 +72,7 @@ export default function(sfSelect, sfPath, schemaForm) {
         }
 
         scope.$watch(
-          ($scope) => { return JSON.stringify($scope.modelArray); },
+          ($scope) => { return scope.$eval(attrs.sfNewArray); },
           () => { watchFn(); onChangeFn(); }
         );
 
